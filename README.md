@@ -1,4 +1,4 @@
-## objectscript-package-template
+# GlobalToJSON-Academic
 This is a template for InterSystems ObjectScript class package which is planned to be published into [ZPM registry](https://pm.community.intersystems.com/packages/-/all).
 [Learn more on Community Package Manager (ZPM)](https://community.intersystems.com/post/introducing-intersystems-objectscript-package-manager)
 
