@@ -101,7 +101,7 @@ ClassMethod sub(
 		if obj.%IsA("%Library.DynamicObject") {
 			set ono=obj.node
 			if '$isvalidnum(ono) set ono=""""_ono_""""
-			set node=level_ono zw node 
+			set node=level_ono 
 			set type=obj.%GetTypeOf("val")
 			do ..set(node_")",obj.val,type)
 			set sub=obj.sub
