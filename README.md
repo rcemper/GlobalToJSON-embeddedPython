@@ -1,4 +1,4 @@
-# GlobalToJSON-Academic
+# GlobalToJSON-Efficient
 This package offers a utility to load a Global into JSON object and to create a    
 Global from this type of JSON object. ***Academic*** refers to the structure created.    
 Each logical node of the Global is presented separately with all its descendants    
