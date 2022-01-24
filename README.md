@@ -41,7 +41,8 @@ $lb(\"Goldman,Kenny H.\",45831)","sub":[{"node":"mJSON","val":"{}"}]},{"node":"4
 
 USER>; this is rather hard to read and follow
 USER>write $$Do^ZPretty(json)
-![](https://raw.githubusercontent.com/rcemper/GlobalToJSON-Academic/master/ZPretty.txt)```
+```
+![](https://raw.githubusercontent.com/rcemper/GlobalToJSON-Academic/master/ZPretty.txt)
 
 ### Code Quality 
 ![CodeQuality](https://raw.githubusercontent.com/rcemper/GlobalToJSON-Academic/master/CodeQuality.JPG) 
