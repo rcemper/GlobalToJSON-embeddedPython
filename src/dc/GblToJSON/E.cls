@@ -39,11 +39,15 @@ ClassMethod node() As %DynamicObject
 ClassMethod lb(val = "") As %String
 {
 #define topspool 99999
-	new %zr
-	set %zr=$ZR
+	new %zsp
+	set %zsp=$zr
 	open 2:$$$topspool use 2 zwrite val close 2
-	set lb=$e($tr(^SPOOL($$$topspool,1),$c(27,13,10)_"[12m"),5,*)
-	if $d(@%zr)
+	set lb=^SPOOL($$$topspool,1)
+	set lb=$replace(lb,$c(27)_"[22m","")
+	set lb=$replace(lb,$c(27)_"[1m","")
+	set lb=$tr(lb,$c(13,10))
+	set lb=$e(lb,5,*)
+	if $d(@%zsp)
 	quit lb
 }
 
