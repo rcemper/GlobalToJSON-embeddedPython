@@ -45,8 +45,8 @@ USER>write $$Do^ZPretty(json)
 ![](https://raw.githubusercontent.com/rcemper/GlobalToJSON-Academic/master/ZPretty.gif)
 
 Now we want to verify the load function.  
-First me make a copy of our source and then delete it    
-After the load operation it is completely< restored    
+First me make a copy of our source and then delete the source   
+After the load operation teh source Global is completely restored    
 ```
 
 ```
