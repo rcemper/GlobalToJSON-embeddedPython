@@ -1,9 +1,10 @@
 # GlobalToJSON-Academic
 This package offers a utility to load a Global into JSON object and to create a 
 Global from this type of JSON object. *Academic* refers to the structer created.    
-each logical node of the Global is presented separated with its descendants also   
-if doesn't contain any stored data.   
-![](https://raw.githubusercontent.com/rcemper/GlobalToJSON-Academic/master/Globals.png) 
+each logical node of the Global is presented separated with all its descendants    
+even if they don't contain any stored data.   
+
+![](https://raw.githubusercontent.com/rcemper/GlobalToJSON-Academic/master/Globals.png)    
 
 ## Prerequisites
 Make sure you have [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and [Docker desktop](https://www.docker.com/products/docker-desktop) installed.
@@ -17,7 +18,10 @@ Run the IRIS container with your project:
 docker-compose up -d --build
 ```
 ## How to Test it
-Open IRIS terminal:
+This is the pre-loaded Global **^dc.MultiD** for testing.
+![](https://raw.githubusercontent.com/rcemper/GlobalToJSON-Academic/master/Global.JPG)
+
+Open IRIS terminal
 
 ```
 $ docker-compose exec iris iris session iris
