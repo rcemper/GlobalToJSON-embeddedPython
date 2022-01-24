@@ -1,7 +1,7 @@
 # GlobalToJSON-Academic
 This package offers a utility to load a Global into JSON object and to create a    
 Global from this type of JSON object. ***Academic*** refers to the structure created.    
-each logical node of the Global is presented separated with all its descendants    
+Each logical node of the Global is presented separately with all its descendants    
 even if they don't contain any stored data.   
 
 ![](https://raw.githubusercontent.com/rcemper/GlobalToJSON-Academic/master/Globals.png)    
