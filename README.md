@@ -1,5 +1,5 @@
 # GlobalToJSON-Academic
-This package offers a utility to load a Global into JSON object and to create a 
+This package offers a utility to load a Global into JSON object and to create a    
 Global from this type of JSON object. *Academic* refers to the structer created.    
 each logical node of the Global is presented separated with all its descendants    
 even if they don't contain any stored data.   
