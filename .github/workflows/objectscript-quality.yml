@@ -1,6 +1,6 @@
 name: objectscriptquality
 on: push
-
+  
 jobs:
   linux:
     name: Linux build
