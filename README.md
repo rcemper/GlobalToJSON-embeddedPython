@@ -30,23 +30,96 @@ USER>; generate JSON object from Global
 USER>set json=##class(dc.GblToJSON.E).do("^dc.MultiD")
 
 USER>zw json
-json={"node":"^dc.MultiD","val":"5","sub":[{"node":"1","val":"$lb(\"Braam,Ted Q.
-\",51353)","sub":[{"node":"mJSON","val":"{}"}]},{"node":"2","val":"$lb(\"Klingma
-n,Uma C.\",62459)","sub":[{"node":"2","sub":[{"node":"Multi","sub":[{"node":"a",
-"val":"1"},{"node":"rob","sub":[{"node":"1","val":"rcc"},{"node":"2","val":"2222
-"}]}]}]},{"node":"Multi","sub":[{"node":"a","val":"1"},{"node":"rob","sub":[{"no
-de":"1","val":"rcc"},{"node":"2","val":"2222"}]}]},{"node":"mJSON","val":"{\"A\"
-:\"ahahah\",\"Rob\":\"VIP\",\"Rob2\":1111,\"Rob3\":true}"}]},{"node":"3","val":"
-$lb(\"Goldman,Kenny H.\",45831)","sub":[{"node":"mJSON","val":"{}"}]},{"node":"4
-","val":"$lb(\"\",\"\")","sub":[{"node":"mJSON","val":"{\"rcc\":122}"}]},{"node"
-:"5","val":"$lb(\"\",\"\")","sub":[{"node":"mJSON","val":"{}"}]}]}  ; <DYNAMIC OBJECT>
+json={"gbl":[{"node":"^dc.MultiD","val":"5"},{"node":"^dc.MultiD(1)","val":"$lb(\"
+Braa,Ted Q.\",5353)"},{"node":"^dc.MultiD(1,\"mJSON\")","val":"{}"},{"node":"^dc.M
+ultiD(2)","val":"$lb(\"Klingan,Ua C.\",6459)"},{"node":"^dc.MultiD(2,2,\"Multi\",\
+"a\")","val":"1"},{"node":"^dc.MultiD(2,2,\"Multi\",\"rob\",1)","val":"rcc"},{"nod
+e":"^dc.MultiD(2,2,\"Multi\",\"rob\",2)","val":"2222"},{"node":"^dc.MultiD(2,\"Mul
+ti\",\"a\")","val":"1"},{"node":"^dc.MultiD(2,\"Multi\",\"rob\",1)","val":"rcc"},{
+"node":"^dc.MultiD(2,\"Multi\",\"rob\",2)","val":"2222"},{"node":"^dc.MultiD(2,\"m
+JSON\")","val":"{\"A\":\"ahahah\",\"Rob\":\"VIP\",\"Rob2\":1111,\"Rob3\":true}"},{
+"node":"^dc.MultiD(3)","val":"$lb(\"Goldan,Kenny H.\",4583)"},{"node":"^dc.MultiD(
+3,\"mJSON\")","val":"{}"},{"node":"^dc.MultiD(4)","val":"$lb(\"\",\"\")"},{"node":
+"^dc.MultiD(4,\"mJSON\")","val":"{\"rcc\":122}"},{"node":"^dc.MultiD(5)","val":"$l
+b(\"\",\"\")"},{"node":"^dc.MultiD(5,\"mJSON\")","val":"{}"}]}  ; <DYNAMIC OBJECT>
 
 USER>; this is rather hard to read and follow
 
 USER>write $$Do^ZPretty(json)
+{
+  "gbl":[
+    {
+      "node":"^dc.MultiD",
+      "val":"5"
+    },
+    {
+      "node":"^dc.MultiD(1)",
+      "val":"$lb(\"Braam,Ted Q.\",51353)"
+    },
+    {
+      "node":"^dc.MultiD(1,\"mJSON\")",
+      "val":"{}"
+    },
+    {
+      "node":"^dc.MultiD(2)",
+      "val":"$lb(\"Klingman,Uma C.\",62459)"
+    },
+    {
+      "node":"^dc.MultiD(2,2,\"Multi\",\"a\")",
+      "val":"1"
+    },
+    {
+      "node":"^dc.MultiD(2,2,\"Multi\",\"rob\",1)",
+      "val":"rcc"
+    },
+    {
+      "node":"^dc.MultiD(2,2,\"Multi\",\"rob\",2)",
+      "val":"2222"
+    },
+    {
+      "node":"^dc.MultiD(2,\"Multi\",\"a\")",
+      "val":"1"
+    },
+    {
+      "node":"^dc.MultiD(2,\"Multi\",\"rob\",1)",
+      "val":"rcc"
+    },
+    {
+      "node":"^dc.MultiD(2,\"Multi\",\"rob\",2)",
+      "val":"2222"
+    },
+    {
+      "node":"^dc.MultiD(2,\"mJSON\")",
+      "val":"{\"A\":\"ahahah\",\"Rob\":\"VIP\",\"Rob2\":1111,\"Rob3\":true}"
+    },
+    {
+      "node":"^dc.MultiD(3)",
+      "val":"$lb(\"Goldman,Kenny H.\",45831)"
+    },
+    {
+      "node":"^dc.MultiD(3,\"mJSON\")",
+      "val":"{}"
+    },
+    {
+      "node":"^dc.MultiD(4)",
+      "val":"$lb(\"\",\"\")"
+    },
+    {
+      "node":"^dc.MultiD(4,\"mJSON\")",
+      "val":"{\"rcc\":122}"
+    },
+    {
+      "node":"^dc.MultiD(5)",
+      "val":"$lb(\"\",\"\")"
+    },
+    {
+      "node":"^dc.MultiD(5,\"mJSON\")",
+      "val":"{}"
+    }
+  ]
+}
+USER>
 ```
-![](https://raw.githubusercontent.com/rcemper/GlobalToJSON-Academic/master/ZPretty.gif)
-
 Now we want to verify the load function.  
 First me make a copy of our source and then delete the source   
 After the load operation the source Global is completely restored    
@@ -55,7 +128,7 @@ USER>merge ^keep=^dc.MultiD
 
 USER>kill ^dc.MultiD
 
-USER>set sc=##class(dc.GblToJSON.A).load(json)
+USER>set sc=##class(dc.GblToJSON.E).load(json)
 
 USER>zw sc
 sc=1
