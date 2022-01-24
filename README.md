@@ -86,4 +86,4 @@ USER>
 ### Code Quality 
 ![CodeQuality](https://raw.githubusercontent.com/rcemper/GlobalToJSON-Academic/master/CodeQuality.JPG) 
 
-[Article in DC](https://community.intersystems.com/post/dataset-lightweight-mn)
+[Article in DC](https://community.intersystems.com/post/globaltojson-academic)
