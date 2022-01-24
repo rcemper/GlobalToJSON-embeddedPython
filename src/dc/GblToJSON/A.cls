@@ -10,7 +10,7 @@ ClassMethod do(gref As %String = "^%") As %DynamicObject
 	quit json
 }
 
-ClassMethod node(zr = "") As %DynamicObject
+ClassMethod node(d = "") As %DynamicObject
 {
 	set d=$d(@$ZR,val)
 	set node={}
@@ -50,7 +50,7 @@ ClassMethod lb(val = "") As %String
 
 ClassMethod load(obj As %DynamicObject) As %Status
 {
-	new %node
+#;	new %node
 	set sc=0
 	set sub=obj.sub
 	set node=obj.node
