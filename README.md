@@ -121,7 +121,7 @@ USER>write $$Do^ZPretty(json)
 USER>
 ```
 Now we want to verify the load function.  
-First me make a copy of our source and then delete the source   
+First we make a copy of our source and then delete the source   
 After the load operation the source Global is completely restored    
 ```
 USER>merge ^keep=^dc.MultiD  
