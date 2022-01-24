@@ -1,10 +1,9 @@
 # GlobalToJSON-Efficient
 This package offers a utility to load a Global into JSON object and to create a    
-Global from this type of JSON object. ***Academic*** refers to the structure created.    
-Each logical node of the Global is presented separately with all its descendants    
-even if they don't contain any stored data.   
+Global from this type of JSON object. ***Efficient*** refers to the structure created.    
+Only Globals nodes containg data are presented in the genearated JSON object.    
 
-![](https://raw.githubusercontent.com/rcemper/GlobalToJSON-Academic/master/Globals.png)    
+![](https://raw.githubusercontent.com/rcemper/GlobalToJSON-Efficient/master/Globals.png)    
 
 ## Prerequisites
 Make sure you have [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and [Docker desktop](https://www.docker.com/products/docker-desktop) installed.
@@ -19,7 +18,7 @@ docker-compose up -d --build
 ```
 ## How to Test it
 This is the pre-loaded Global **^dc.MultiD** for testing.
-![](https://raw.githubusercontent.com/rcemper/GlobalToJSON-Academic/master/Global.JPG)
+![](https://raw.githubusercontent.com/rcemper/GlobalToJSON-Efficient/master/Global.JPG)
 
 Open IRIS terminal
 ```
@@ -28,7 +27,7 @@ USER>
 
 USER>; generate JSON object from Global
 
-USER>set json=##class(dc.GblToJSON.A).do("^dc.MultiD")
+USER>set json=##class(dc.GblToJSON.E).do("^dc.MultiD")
 
 USER>zw json
 json={"node":"^dc.MultiD","val":"5","sub":[{"node":"1","val":"$lb(\"Braam,Ted Q.
