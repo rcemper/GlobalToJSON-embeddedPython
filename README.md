@@ -42,7 +42,7 @@ USER>kill ^dc.MultiD
 
 USER>set sc=##class(dc.GblToJSON.E).load()
 
-USER>zw sc
+USER>zw sc 
 sc=1
 
 USER>zw ^dc.MultiD
