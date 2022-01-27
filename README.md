@@ -1,7 +1,7 @@
 # GlobalToJSON-embeddedPython
-Export a Global into a JSON file and to create by reloading from tis file. ***embeddedPython*** refers to the new 
-availabel tecchnologies. It sould be understood as a learning exercise of how to hanle the lanuage intefaces.    
-Only Globals nodes containing data are presented in the generated JSON fle.    
+Export a Global into a JSON file and to create by reloading from tis file. ***embeddedPython*** refers to the new   
+availablel tecchnologies. It should be understood as a learning exercise of how to handle the language intefaces.    
+Only Global nodes containing data are presented in the generated JSON fle.    
 
 ![](https://raw.githubusercontent.com/rcemper/GlobalToJSON-embeddedPython/master/Globals.png)    
 
