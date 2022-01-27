@@ -1,16 +1,16 @@
-# GlobalToJSON-Efficient
-This package offers a utility to load a Global into JSON object and to create a    
-Global from this type of JSON object. ***Efficient*** refers to the structure created.    
-Only Globals nodes containing data are presented in the generated JSON object.    
+# GlobalToJSON-embeddedPython
+Export a Global into a JSON file and to create by reloading from tis file. ***embeddedPython*** refers to the new 
+availabel tecchnologies. It sould be understood as a learning exercise of how to hanle the lanuage intefaces.    
+Only Globals nodes containing data are presented in the generated JSON fle.    
 
-![](https://raw.githubusercontent.com/rcemper/GlobalToJSON-Efficient/master/Globals.png)    
+![](https://raw.githubusercontent.com/rcemper/GlobalToJSON-embeddedPython/master/Globals.png)    
 
 ## Prerequisites
 Make sure you have [git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git) and [Docker desktop](https://www.docker.com/products/docker-desktop) installed.
 ## Installation 
 Clone/git pull the repo into any local directory
 ```
-git clone https://github.com/rcemper/GlobalToJSON-Efficient.git
+git clone https://github.com/rcemper/GlobalToJSON-embeddedPython.git
 ```
 Run the IRIS container with your project: 
 ```
@@ -18,108 +18,20 @@ docker-compose up -d --build
 ```
 ## How to Test it
 This is the pre-loaded Global **^dc.MultiD** for testing.
-![](https://raw.githubusercontent.com/rcemper/GlobalToJSON-Efficient/master/Global.JPG)
+![](https://raw.githubusercontent.com/rcemper/GlobalToJSON-embeddedPython/master/Global.JPG)
 
 Open IRIS terminal
 ```
 $ docker-compose exec iris iris session iris
 USER>
-
 USER>; generate JSON object from Global
-
-USER>set json=##class(dc.GblToJSON.E).do("^dc.MultiD")
-
-USER>zw json
-json={"gbl":[{"node":"^dc.MultiD","val":"5"},{"node":"^dc.MultiD(1)","val":"$lb(\"
-Braa,Ted Q.\",5353)"},{"node":"^dc.MultiD(1,\"mJSON\")","val":"{}"},{"node":"^dc.M
-ultiD(2)","val":"$lb(\"Klingan,Ua C.\",6459)"},{"node":"^dc.MultiD(2,2,\"Multi\",\
-"a\")","val":"1"},{"node":"^dc.MultiD(2,2,\"Multi\",\"rob\",1)","val":"rcc"},{"nod
-e":"^dc.MultiD(2,2,\"Multi\",\"rob\",2)","val":"2222"},{"node":"^dc.MultiD(2,\"Mul
-ti\",\"a\")","val":"1"},{"node":"^dc.MultiD(2,\"Multi\",\"rob\",1)","val":"rcc"},{
-"node":"^dc.MultiD(2,\"Multi\",\"rob\",2)","val":"2222"},{"node":"^dc.MultiD(2,\"m
-JSON\")","val":"{\"A\":\"ahahah\",\"Rob\":\"VIP\",\"Rob2\":1111,\"Rob3\":true}"},{
-"node":"^dc.MultiD(3)","val":"$lb(\"Goldan,Kenny H.\",4583)"},{"node":"^dc.MultiD(
-3,\"mJSON\")","val":"{}"},{"node":"^dc.MultiD(4)","val":"$lb(\"\",\"\")"},{"node":
-"^dc.MultiD(4,\"mJSON\")","val":"{\"rcc\":122}"},{"node":"^dc.MultiD(5)","val":"$l
-b(\"\",\"\")"},{"node":"^dc.MultiD(5,\"mJSON\")","val":"{}"}]}  ; <DYNAMIC OBJECT>
-
-USER>; this is rather hard to read and follow
-
-USER>write $$Do^ZPretty(json)
-{
-  "gbl":[
-    {
-      "node":"^dc.MultiD",
-      "val":"5"
-    },
-    {
-      "node":"^dc.MultiD(1)",
-      "val":"$lb(\"Braam,Ted Q.\",51353)"
-    },
-    {
-      "node":"^dc.MultiD(1,\"mJSON\")",
-      "val":"{}"
-    },
-    {
-      "node":"^dc.MultiD(2)",
-      "val":"$lb(\"Klingman,Uma C.\",62459)"
-    },
-    {
-      "node":"^dc.MultiD(2,2,\"Multi\",\"a\")",
-      "val":"1"
-    },
-    {
-      "node":"^dc.MultiD(2,2,\"Multi\",\"rob\",1)",
-      "val":"rcc"
-    },
-    {
-      "node":"^dc.MultiD(2,2,\"Multi\",\"rob\",2)",
-      "val":"2222"
-    },
-    {
-      "node":"^dc.MultiD(2,\"Multi\",\"a\")",
-      "val":"1"
-    },
-    {
-      "node":"^dc.MultiD(2,\"Multi\",\"rob\",1)",
-      "val":"rcc"
-    },
-    {
-      "node":"^dc.MultiD(2,\"Multi\",\"rob\",2)",
-      "val":"2222"
-    },
-    {
-      "node":"^dc.MultiD(2,\"mJSON\")",
-      "val":"{\"A\":\"ahahah\",\"Rob\":\"VIP\",\"Rob2\":1111,\"Rob3\":true}"
-    },
-    {
-      "node":"^dc.MultiD(3)",
-      "val":"$lb(\"Goldman,Kenny H.\",45831)"
-    },
-    {
-      "node":"^dc.MultiD(3,\"mJSON\")",
-      "val":"{}"
-    },
-    {
-      "node":"^dc.MultiD(4)",
-      "val":"$lb(\"\",\"\")"
-    },
-    {
-      "node":"^dc.MultiD(4,\"mJSON\")",
-      "val":"{\"rcc\":122}"
-    },
-    {
-      "node":"^dc.MultiD(5)",
-      "val":"$lb(\"\",\"\")"
-    },
-    {
-      "node":"^dc.MultiD(5,\"mJSON\")",
-      "val":"{}"
-    }
-  ]
-}
+USER>set json=##class(dc.GblToJSON.ePy).do("^dc.MultiD")
 USER>
 ```
+this is the file content   
+
+![gbl.json](https://raw.githubusercontent.com/rcemper/GlobalToJSON-Efficient/master/gbl.json) 
+
 Now we want to verify the load function.  
 First we make a copy of our source and then delete the source   
 After the load operation the source Global is completely restored    
@@ -128,7 +40,7 @@ USER>merge ^keep=^dc.MultiD
 
 USER>kill ^dc.MultiD
 
-USER>set sc=##class(dc.GblToJSON.E).load(json)
+USER>set sc=##class(dc.GblToJSON.E).load()
 
 USER>zw sc
 sc=1
@@ -156,6 +68,6 @@ USER>
 ```
 **q.a.d.**   
 ### Code Quality 
-![CodeQuality](https://raw.githubusercontent.com/rcemper/GlobalToJSON-Efficient/master/CodeQuality.JPG) 
+![CodeQuality](https://raw.githubusercontent.com/rcemper/GlobalToJSON-embeddedPython/master/CodeQuality.JPG) 
 
-[Article in DC](https://community.intersystems.com/post/globaltojson-efficient)
+[Article in DC](https://community.intersystems.com/post/globaltojson-embeddedpython)
