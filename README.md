@@ -1,6 +1,6 @@
 # GlobalToJSON-embeddedPython
 Export a Global into a JSON file and to create by reloading from tis file. ***embeddedPython*** refers to the new   
-availablel tecchnologies. It should be understood as a learning exercise of how to handle the language intefaces.    
+available technologies. It should be understood as a learning exercise of how to handle the language interfaces.    
 Only Global nodes containing data are presented in the generated JSON fle.    
 
 ![](https://raw.githubusercontent.com/rcemper/GlobalToJSON-embeddedPython/master/Globals.png)    
@@ -24,11 +24,11 @@ Open IRIS terminal
 ```
 $ docker-compose exec iris iris session iris
 USER>
-USER>; generate JSON object from Global
-USER>set json=##class(dc.GblToJSON.ePy).do("^dc.MultiD")
+USER>; generate JSON object file from Global
+USER>set sc=##class(dc.GblToJSON.ePy).do("^dc.MultiD")
 USER>
 ```
-this is the file content   
+This is the file content   
 
 ![gbl.json](https://raw.githubusercontent.com/rcemper/GlobalToJSON-embeddedPython/master/gbl.json.jpg) 
 
