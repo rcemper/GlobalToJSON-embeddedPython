@@ -40,7 +40,7 @@ USER>merge ^keep=^dc.MultiD
 
 USER>kill ^dc.MultiD
 
-USER>set sc=##class(dc.GblToJSON.E).load()
+USER>set sc=##class(dc.GblToJSON.ePy).load()
 
 USER>zw sc 
 sc=1
