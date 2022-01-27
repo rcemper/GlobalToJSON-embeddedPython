@@ -1,5 +1,5 @@
 # GlobalToJSON-embeddedPython
-Export a Global into a JSON file and re-create by reloading from this file. ***embeddedPython*** refers to the new   
+Export a Global into a JSON file and re-create it by reloading from this file. ***embeddedPython*** refers to the new   
 available technologies. It should be understood as a learning exercise of how to handle the language interfaces.    
 Only Global nodes containing data are presented in the generated JSON fle.    
 
