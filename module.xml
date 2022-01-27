@@ -6,8 +6,8 @@
       <Version>0.0.1</Version>
       <Packaging>module</Packaging>
       <SourcesRoot>src</SourcesRoot>
-      <Resource Name="dc.GblToJSON.PKG"/>
-      <Resource Name="dc.MultiD.GBL"/>
+      <Resource Name="dc.GblToJSON.ePy.CLS"/>
+      <Resource Name="dc.MultiDy.GBL"/>
       <Description>create a JSON Object from Global and with Importer - embdded Python</Description>
       	 <Author>
     			<Person>Robert C. Cemper</Person>
