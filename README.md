@@ -30,7 +30,7 @@ USER>
 ```
 this is the file content   
 
-![gbl.json](https://raw.githubusercontent.com/rcemper/GlobalToJSON-Efficient/master/gbl.json) 
+![gbl.json](https://raw.githubusercontent.com/rcemper/GlobalToJSON-embeddedPython/master/gbl.json) 
 
 Now we want to verify the load function.  
 First we make a copy of our source and then delete the source   
