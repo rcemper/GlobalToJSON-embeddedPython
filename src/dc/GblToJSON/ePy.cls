@@ -44,6 +44,7 @@ return 1
 ClassMethod done(fil As %SYS.Python) As %Status [ Language = python ]
 {
 fil.write(']}')
+fil.close()
 return 1
 }
 
