@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Export generator="Cache" version="25">
-  <Document name="gbl-to-json-e.ZPM">
+  <Document name="gbl-to-json-epy.ZPM">
     <Module>
-      <Name>gbl-to-json-e</Name>
-      <Version>0.0.2</Version>
+      <Name>gbl-to-json-epy</Name>
+      <Version>0.0.3</Version>
       <Packaging>module</Packaging>
       <SourcesRoot>src</SourcesRoot>
       <Resource Name="dc.GblToJSON.ePy.CLS"/>
