@@ -70,20 +70,11 @@ ClassMethod setLb(
 	quit $$$OK
 }
 
-ClassMethod load(file = "gbl.json") As %Status
-{
-	set clsn=$this
-	quit ..loadPy(file,clsn)
-}
-
-ClassMethod loadPy(
-	file As %String,
-	clsn As %String) As %Status [ Language = python ]
+ClassMethod load(file As %String = "gbl.json") As %Status [ Language = python ]
 {
 import json
 import iris
-
-cls=iris.cls(clsn)
+cls=iris.cls(__name__)
 g=""
 
 with open(file,'r') as fil:
