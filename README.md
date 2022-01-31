@@ -68,6 +68,8 @@ USER>
 ```
 **q.a.d.**   
 ### Code Quality 
-![CodeQuality](https://raw.githubusercontent.com/rcemper/GlobalToJSON-embeddedPython/master/CodeQuality.JPG) 
+![CodeQuality](https://raw.githubusercontent.com/rcemper/GlobalToJSON-embeddedPython/master/CodeQuality.JPG)   
 
-[Article in DC](https://community.intersystems.com/post//globaltojson-embeddedpython)
+[Video](https://youtu.be/-QesCoqzWUM)   
+
+[Article in DC](https://community.intersystems.com/post//globaltojson-embeddedpython)    
