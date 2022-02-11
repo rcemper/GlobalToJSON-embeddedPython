@@ -73,4 +73,7 @@ USER>
 
 [Video](https://youtu.be/-QesCoqzWUM)   
 
+[Online Demo Terminal](https://gbl-to-json-epy.demo.community.intersystems.com/terminal/)      
+[Online Demo SMP](https://gbl-to-json-epy.demo.community.intersystems.com/csp/sys/%25CSP.Portal.Home.zen)
+
 [Article in DC](https://community.intersystems.com/post/globaltojson-embeddedpython)    
