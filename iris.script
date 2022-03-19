@@ -4,4 +4,4 @@ zn "USER"
 zpm "install pretty-json"
 zpm "install webterminal"
 zpm "load /opt/irisbuild/ -v":1
-halt 
+halt
