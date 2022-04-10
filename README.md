@@ -68,8 +68,6 @@ USER>zw ^dc.MultiD
 USER>
 ```
 **q.a.d.**   
-### Code Quality 
-![CodeQuality](https://raw.githubusercontent.com/rcemper/GlobalToJSON-embeddedPython/master/CodeQuality.JPG)   
 
 [Video](https://youtu.be/-QesCoqzWUM)   
 
@@ -77,3 +75,6 @@ USER>
 [Online Demo SMP](https://gbl-to-json-epy.demo.community.intersystems.com/csp/sys/%25CSP.Portal.Home.zen)
 
 [Article in DC](https://community.intersystems.com/post/globaltojson-embeddedpython)    
+
+**Code Quality**   
+<img width="85%" src="https://openexchange.intersystems.com/mp/img/packages/1757/screenshots/oi6rothhjlibblstwsabhcnjc.jpg">
