@@ -73,7 +73,7 @@ USER>
 
 [Video](https://youtu.be/-QesCoqzWUM)   
   
-[Online Demo SMP](https://gbl-to-json-epy.demo.community.intersystems.com/csp/sys/%25CSP.Portal.Home.zen)
+[Online Demo SMP](https://gbl-to-json-epy.demo.community.intersystems.com/csp/sys/%25CSP.Portal.Home.zen)     
 [Online Demo Terminal](https://gbl-to-json-epy.demo.community.intersystems.com/terminal/)   
 
 **Code Quality**   
